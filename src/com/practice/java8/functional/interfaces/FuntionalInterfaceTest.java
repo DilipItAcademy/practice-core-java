@@ -1,4 +1,4 @@
-package com.practice.java8.functional.interfaces.demos;
+package com.practice.java8.functional.interfaces;
 
 
 @FunctionalInterface
