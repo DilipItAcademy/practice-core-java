@@ -1,8 +1,9 @@
 package com.practice.java8.method.references;
 
 //To Sort with Custom Comparator But using object method reference
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 //Comparator class
 class ComparisonProvider {

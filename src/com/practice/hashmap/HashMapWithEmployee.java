@@ -18,7 +18,7 @@ public class HashMapWithEmployee {
 	employees.put(e3, "Employee 3");
 	employees.put(e4, "Employee 1");
 
-	
+
 	e3.setEmpName("Abhi Singh");
 	e4.setEmpName("Dilip Singh");
 
@@ -61,7 +61,7 @@ class Employe {
     // Depends only on account number
     @Override
     public int hashCode() {
-	
+
 	final int prime = 31;
 	return prime * 1 + this.empId;
     }
@@ -71,11 +71,7 @@ class Employe {
     public boolean equals(Object obj) {
 	if (this == obj)
 	    return true;
-	if (obj == null)
-	    return false;
-	if (getClass() != obj.getClass())
-	    return false;
-	if (this.empId != ((Employe)obj).empId)
+	if ((obj == null) || (getClass() != obj.getClass()) || (this.empId != ((Employe)obj).empId))
 	    return false;
 	return true;
     }

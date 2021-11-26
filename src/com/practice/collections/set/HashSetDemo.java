@@ -8,7 +8,7 @@ public class HashSetDemo {
 
 	public static void main(String[] args) {
 
-		Set<String> names = new HashSet<String>();
+		Set<String> names = new HashSet<>();
 
 		names.add("Dilip");
 		names.add("Arnav");

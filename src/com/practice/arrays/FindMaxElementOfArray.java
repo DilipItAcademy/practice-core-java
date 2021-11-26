@@ -11,19 +11,19 @@ public class FindMaxElementOfArray {
 		int temp;
 		int maxValue = 0;
 
-		for (int i = 0; i < arr.length; i++) {
-			temp = arr[i];
+		for (int element : arr) {
+			temp = element;
 			if (temp > maxValue) {
 				maxValue = temp;
 			}
 		}
 
 		System.out.println("Max Value : " + maxValue);
-		
-		//Using Existing Functions 
+
+		//Using Existing Functions
 		Arrays.sort(arr);
 		System.out.println("Max Value Of An Array : "+arr[arr.length - 1]);
-		
+
 	}
 
 }

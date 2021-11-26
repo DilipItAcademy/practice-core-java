@@ -11,7 +11,7 @@ public interface FuntionalInterfaceTest {
 	    default void defaultMethodTwo(){
 	        System.out.println("Interface defaultMethodTwo method");
 	    }
-	    
+
 	    default void defaultMethodThree(){
 	        System.out.println("Interface defaultMethodThree method");
 	    }

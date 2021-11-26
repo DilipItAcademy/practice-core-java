@@ -38,7 +38,8 @@ public class Employee {
     }
 
     // return employee details in the main() method to print it
-    public String toString() {
+    @Override
+	public String toString() {
 	return this.emp_id + " " + this.name + " " + this.address;
     }
 }

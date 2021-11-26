@@ -19,6 +19,12 @@ public class StringsReferencesTesting {
 		System.out.println(str2.hashCode());
 
 
+		System.out.println(10+20+"Java");
+		System.out.println("Java"+10+20);
+		System.out.println(10*20+"Java");
+		System.out.println("Java"+10*20);
+
+
 	}
 
 }

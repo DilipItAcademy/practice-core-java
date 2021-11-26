@@ -21,7 +21,7 @@ public class StaticMethodReferencesDemo {
 
     public static void main(String[] args) {
 
-	// Creating an empty ArrayList of user-defined type List of person 
+	// Creating an empty ArrayList of user-defined type List of person
 	List<Person> personList = new ArrayList<>();
 
 	personList.add(new Person("vicky", 24));
@@ -37,7 +37,7 @@ public class StaticMethodReferencesDemo {
 	System.out.println("Sort by age :");
 	Collections.sort(personList, StaticMethodReferencesDemo::compareByAge);
 	personList.stream().map(x -> x.getName()).forEach(System.out::println);
-	
-	
+
+
     }
 }

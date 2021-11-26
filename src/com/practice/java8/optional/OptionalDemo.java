@@ -35,8 +35,8 @@ public class OptionalDemo {
 
 		name = Optional.ofNullable(names[4]);
 
-		//filter and orElse methods 
-		
+		//filter and orElse methods
+
 		Optional<String> result = name.filter(n -> n.equalsIgnoreCase("Singhh"));
 		if (!result.isEmpty() && result.isPresent())
 			System.out.println(result.get());
