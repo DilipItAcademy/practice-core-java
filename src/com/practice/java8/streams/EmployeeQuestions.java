@@ -113,14 +113,61 @@ public class EmployeeQuestions {
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
 		System.out.println(countOfMaleFemaleInSalesDept);
 
-
-		 //What is the average salary of male and female employees
+		// What is the average salary of male and female employees
 		System.out.println("*******************  What is the average salary of male and female employees");
-		Map<String, Double> avgSalariesOfGenderBase =  employees.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
+		Map<String, Double> avgSalariesOfGenderBase = employees.stream()
+				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
 		System.out.println(avgSalariesOfGenderBase);
 
+	}
 
+	public static void testLearning() {
 
+		List<Employee> employees = createEmployeeList();
+
+		// Reference URL :
+		// https://javaconceptoftheday.com/solving-real-time-queries-using-java-8-features-employee-management-system/
+
+		// Highest Salary Employee Details
+
+		// First Highest Salary
+
+		// sort all the employee on the basis of age
+		System.out.println("sort all the employee on the basis of age? Use java 8 APIs only");
+
+		// How many male and female employees are there in the organization?
+		System.out.println("*******  Employes Count Based on Gender");
+
+		// Print the name of all departments in the organization
+		System.out.println("*******  All Departments in Organization ");
+
+		// What is the average age of male and female employees
+		System.out.println(" *******   Average Age of Male and Female Employees : ");
+
+		// Get the employees who have joined after 2015
+		System.out.println("*************   Get the employees who have joined after 2015");
+
+		// Get the names of all employees who have joined after 2015
+		System.out.println("*************   Get the names of employees who have joined after 2015");
+
+		// Count the number of employees in each department
+		System.out.println("************    Count the number of employees in each department");
+
+		// What is the average salary of each department
+		System.out.println("****************   What is the average salary of each department");
+
+		// Get the details of youngest male employee in the product development
+		// department
+		System.out.println("****************   Get the details of youngest male employee in the product development department");
+
+		// Who has the most working experience in the Organization?
+		System.out.println("****************  Who has the most working experience in the Organization?");
+
+		// How many male and female employees are there in the sales and marketing team
+		System.out.println("***************  How many male and female employees are there in the sales and marketing team");
+
+		// What is the average salary of male and female employees
+		System.out.println("*******************  What is the average salary of male and female employees");
 
 	}
 
