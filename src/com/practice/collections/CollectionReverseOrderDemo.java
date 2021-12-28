@@ -38,16 +38,17 @@ public class CollectionReverseOrderDemo {
 		// Java 8 Format:
 
 		// Sorting employees in descending order of employee Name
-		//Comparator<Employee> compareByName = (Employee o1, Employee o2) -> o1.getName().compareTo(o2.getName());
-		//Collections.sort(employees, compareByName.reversed());
-		
-		Collections.sort(employees, ( o1,  o2) -> o1.getName().compareTo(o2.getName()));
-		
+		// Comparator<Employee> compareByName = (Employee o1, Employee o2) ->
+		// o1.getName().compareTo(o2.getName());
+		// Collections.sort(employees, compareByName.reversed());
+
+		Collections.sort(employees, (o1, o2) -> o1.getName().compareTo(o2.getName()));
+
 		employees.forEach(System.out::println);
 
 		// Sorting employees in descending order of employee Address
 		System.out.println("\nEmployees sorted by employee Address : Descending Order");
-		Comparator<Employee> compareByAddress = (Employee o1, Employee o2) -> {
+		Comparator<Employee> compareByAddress = (o1, o2) -> {
 			// We can Write Code Block Here
 			return o1.getAddress().compareTo(o2.getAddress());
 		};

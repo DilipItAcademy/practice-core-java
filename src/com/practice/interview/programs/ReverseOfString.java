@@ -28,6 +28,21 @@ public class ReverseOfString {
 
 		}
 
+		// Using Swapping
+		char[] temparray = name.toCharArray();
+		int left;
+		int right = temparray.length - 1;
+
+		for (left = 0; left < right; left++, right--) {
+			// Swap values of left and right
+			char temp = temparray[left];
+			temparray[left] = temparray[right];
+			temparray[right] = temp;
+		}
+
+		for (char c : temparray)
+			System.out.print(c);
+
 	}
 
 }

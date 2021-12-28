@@ -18,7 +18,6 @@ public interface FunctionalInterfaceOne {
 	}
 
 	static String getInterfaceData() {
-
 		return "FunctionalInterfaceOne";
 	}
 

@@ -5,7 +5,7 @@ package com.practice.exception.handling;
 
 class Parent {
 	// SuperClass declare an exception
-	public void methodOne() throws RuntimeException{
+	public void methodOne() throws RuntimeException {
 		System.out.println("Parent : methodOne");
 	}
 
@@ -13,10 +13,10 @@ class Parent {
 
 class Child extends Parent {
 	// SubClass declaring an exception not a child exception of RuntimeException
-	
-	//public void methodOne()  throws Exception { // Compile Error 
-	
-	public void methodOne()  throws ArrayIndexOutOfBoundsException {
+
+	// public void methodOne() throws Exception { // Compile Error
+
+	public void methodOne() throws ArrayIndexOutOfBoundsException {
 		System.out.println("Child : methodOne");
 	}
 

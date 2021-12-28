@@ -119,39 +119,51 @@ public class EmployeeQuestions {
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
 		System.out.println(avgSalariesOfGenderBase);
 
+		testLearning();
+
 	}
 
 	public static void testLearning() {
 
 		List<Employee> employees = createEmployeeList();
 
-		// Reference URL :
-		// https://javaconceptoftheday.com/solving-real-time-queries-using-java-8-features-employee-management-system/
+		System.out.println("*******************************&&&&&&&&&&&***********************************");
+		// Highest Salary
+		System.out.println("Highest Salary : " + employees.stream().mapToDouble(Employee::getSalary).max());
 
-		// Highest Salary Employee Details
-
-		// First Highest Salary
+		// 2nd Highest Salary
+		System.out.println("2nd Highest Salary : " + employees.stream().mapToDouble(Employee::getSalary).skip(1).max());
 
 		// sort all the employee on the basis of age
-		System.out.println("sort all the employee on the basis of age? Use java 8 APIs only");
+		System.out.println("sort all the employee on the basis of age");
+		employees.stream().sorted((e1, e2) -> e1.getAge() - e2.getAge()).forEach(System.out::println);
 
 		// How many male and female employees are there in the organization?
 		System.out.println("*******  Employes Count Based on Gender");
+		employees.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()))
+				.forEach((gender, count) -> System.out.println(gender + " : " + count));
 
 		// Print the name of all departments in the organization
 		System.out.println("*******  All Departments in Organization ");
+		employees.stream().map(Employee::getDepartment).distinct().forEach(System.out::println);
 
 		// What is the average age of male and female employees
 		System.out.println(" *******   Average Age of Male and Female Employees : ");
+		employees.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)))
+				.forEach((Gender, avgAge) -> System.out.println(Gender + " : " + avgAge));
 
 		// Get the employees who have joined after 2015
 		System.out.println("*************   Get the employees who have joined after 2015");
+		employees.stream().filter(e -> e.getYearOfJoining() > 2015).collect(Collectors.toList()).forEach(System.out::println);
 
 		// Get the names of all employees who have joined after 2015
 		System.out.println("*************   Get the names of employees who have joined after 2015");
+		employees.stream().filter(e -> e.getYearOfJoining() > 2015).map(Employee::getName).forEach(System.out::println);
 
 		// Count the number of employees in each department
 		System.out.println("************    Count the number of employees in each department");
+		employees.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()))
+				.forEach((dept, count) -> System.out.println(dept + " : " + count));
 
 		// What is the average salary of each department
 		System.out.println("****************   What is the average salary of each department");
@@ -159,15 +171,25 @@ public class EmployeeQuestions {
 		// Get the details of youngest male employee in the product development
 		// department
 		System.out.println("****************   Get the details of youngest male employee in the product development department");
+		Employee emp = employees.stream()
+				.filter(e -> e.getDepartment().equalsIgnoreCase("Product Development") && e.getGender().equalsIgnoreCase("Male"))
+				.min(Comparator.comparing(Employee::getAge)).get();
+		System.out.println(emp);
 
 		// Who has the most working experience in the Organization?
 		System.out.println("****************  Who has the most working experience in the Organization?");
+		System.out.println(employees.stream().max(Comparator.comparing(Employee::getYearOfJoining)).get().getName());
 
 		// How many male and female employees are there in the sales and marketing team
 		System.out.println("***************  How many male and female employees are there in the sales and marketing team");
+		employees.stream().filter(e -> e.getDepartment().equalsIgnoreCase("Sales And Marketing"))
+				.collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()))
+				.forEach((gender, count) -> System.out.println(gender + " : " + count));
 
 		// What is the average salary of male and female employees
 		System.out.println("*******************  What is the average salary of male and female employees");
+		employees.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)))
+				.forEach((gender, sal) -> System.out.println(gender + " : " + sal));
 
 	}
 

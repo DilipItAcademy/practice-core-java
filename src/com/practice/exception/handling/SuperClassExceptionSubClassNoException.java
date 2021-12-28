@@ -4,16 +4,16 @@ import java.io.IOException;
 
 //If SuperClass declares an exception and SubClass No Exception declared
 
-class ParentTwo{
+class ParentTwo {
 	// SuperClass declare an exception
-	public void methodOne() throws RuntimeException {
+	public void methodOne() throws Exception {
 		System.out.println("ParentTwo : methodOne");
 	}
 
 }
 
 class ChildTwo extends ParentTwo {
-	// SubClass not declaring an exception 
+	// SubClass not declaring an exception
 	public void methodOne() {
 		System.out.println("ChildTwo : methodOne");
 	}
@@ -22,7 +22,7 @@ class ChildTwo extends ParentTwo {
 
 public class SuperClassExceptionSubClassNoException {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		ParentTwo p = new ChildTwo();
 		p.methodOne();
 	}

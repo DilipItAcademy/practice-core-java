@@ -1,4 +1,4 @@
-package com.practice.strings;
+package com.practice.interview.programs;
 
 public class PrintName1000TimesWithoutLoop {
 

@@ -54,8 +54,8 @@ public class Car {
 	}
 
 	public boolean doQualityCheck() {
-		return (chassis != null && !chassis.trim().isEmpty()) && (body != null && !body.trim().isEmpty()) && (paint != null && !paint.trim().isEmpty())
-				&& (interior != null && !interior.trim().isEmpty());
+		return (chassis != null && !chassis.trim().isEmpty()) && (body != null && !body.trim().isEmpty())
+				&& (paint != null && !paint.trim().isEmpty()) && (interior != null && !interior.trim().isEmpty());
 
 	}
 
@@ -67,15 +67,8 @@ public class Car {
 
 		StringBuilder builder = new StringBuilder();
 
-		builder.append("Car [chassis=")
-				.append(chassis)
-				.append(", body=")
-				.append(body)
-				.append(", paint=")
-				.append(paint)
-				.append(", interior=")
-				.append(interior)
-				.append("]");
+		builder.append("Car [chassis=").append(chassis).append(", body=").append(body).append(", paint=").append(paint).append(", interior=")
+				.append(interior).append("]");
 
 		return builder.toString();
 

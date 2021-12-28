@@ -31,6 +31,4 @@ public class FunctionalDemo implements FuntionalInterfaceTest {
 		System.out.println("Class Default Method Two From Class");
 	}
 
-
-
 }

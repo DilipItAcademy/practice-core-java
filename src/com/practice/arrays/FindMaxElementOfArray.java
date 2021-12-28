@@ -6,7 +6,7 @@ public class FindMaxElementOfArray {
 
 	public static void main(String[] args) {
 
-		int arr[] = { 0, 1, 4, 5, 7, 8, 9, 10, 2, 6, 3};
+		int arr[] = { 0, 1, 4, 5, 7, 8, 9, 10, 2, 6, 3 };
 
 		int temp;
 		int maxValue = 0;
@@ -20,9 +20,9 @@ public class FindMaxElementOfArray {
 
 		System.out.println("Max Value : " + maxValue);
 
-		//Using Existing Functions
+		// Using Existing Functions
 		Arrays.sort(arr);
-		System.out.println("Max Value Of An Array : "+arr[arr.length - 1]);
+		System.out.println("Max Value Of An Array : " + arr[arr.length - 1]);
 
 	}
 
