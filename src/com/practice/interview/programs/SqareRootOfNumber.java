@@ -3,7 +3,7 @@ package com.practice.interview.programs;
 public class SqareRootOfNumber {
 
 	public static void main(String[] args) {
-		
+
 		double number = 18;
 
 		System.out.println("Number : " + number);
