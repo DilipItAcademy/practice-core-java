@@ -46,6 +46,11 @@ public class IntValuesStreamOperations {
 
 		System.out.println("minObject = " + minObject);
 		System.out.println("maxObject = " + maxObject);
+		
+		//String Data
+		 List<String> list = Arrays.asList("a","b","c","a","b");
+		 System.out.println(list.stream().filter( s -> s.equals("b")).findFirst());
+
 
 	}
 

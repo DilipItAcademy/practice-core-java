@@ -7,22 +7,20 @@ public class PermutationsOfString {
 
 		for (int i = 0; i < str.length(); i++) {
 
-			// ith character of str
+			// i'th character of str
 			char ch = str.charAt(i);
 
-			// Rest of the string after excluding the ith character
+			// Rest of the string after excluding the i'th character
 			String ros = str.substring(0, i) + str.substring(i + 1);
 
 			// Recurvise call
 			printPermutn(ros, ans + ch);
-			
-			
+
 		}
-		
+
 		System.out.println(ans);
 	}
 
-	// Driver code
 	public static void main(String[] args) {
 		String s = "abb";
 		printPermutn(s, "");

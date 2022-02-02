@@ -10,8 +10,7 @@ public class ConsumerAndSupplier {
 
 	public static void main(String[] args) {
 
-		// consumer is a method that consumes some value and does some operations on
-		// them.
+		// consumer is a method that consumes some value and does some operations on them.
 		// Consumer For calculating lenght of Each String
 		Consumer<String> stringConsumer = s -> System.out.println(s.length());
 
@@ -43,8 +42,7 @@ public class ConsumerAndSupplier {
 		// Implement dispList using accept()
 		dispList.accept(list);
 
-		// Supplier : It represents a function which does not take in any argument but
-		// produces a value of type T.
+		// Supplier : It represents a function which does not take in any argument but produces a value of type T.
 
 		// This function returns a random value.
 		Supplier<Double> randomValue = () -> Math.random();

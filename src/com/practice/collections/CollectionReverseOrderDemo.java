@@ -25,10 +25,8 @@ public class CollectionReverseOrderDemo {
 
 		System.out.println("\nEmployees sorted by employee id : Descending Order");
 
-		// Sorting employees in descending order of employee id using a Comparator that
-		// is inverse of SortByEmpId()
-		Comparator<Employee> empIdComp = Collections.reverseOrder(new SortByEmpId());
-		Collections.sort(employees, empIdComp);
+		// Sorting employees in descending order of employee id using a Comparator
+		Collections.sort(employees, Collections.reverseOrder((emp1, emp2) -> emp1.getEmp_id() - emp2.getEmp_id()));
 
 		for (Employee emp : employees)
 			System.out.println(emp);

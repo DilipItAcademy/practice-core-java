@@ -181,7 +181,7 @@ public class EmployeeQuestions {
 		System.out.println(employees.stream().max(Comparator.comparing(Employee::getYearOfJoining)).get().getName());
 
 		// How many male and female employees are there in the sales and marketing team
-		System.out.println("***************  How many male and female employees are there in the sales and marketing team");
+		System.out.println("*************** How many male and female employees are there in the sales and marketing team");
 		employees.stream().filter(e -> e.getDepartment().equalsIgnoreCase("Sales And Marketing"))
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()))
 				.forEach((gender, count) -> System.out.println(gender + " : " + count));
