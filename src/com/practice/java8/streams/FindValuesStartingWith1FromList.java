@@ -14,7 +14,7 @@ public class FindValuesStartingWith1FromList {
 	System.out.println("Sorting");
 	values.stream().sorted().forEach(System.out::println);
 
-	System.out.println("checking actual list instance is modified or not. ");
+	System.out.println("Checking actual list instance is modified or not.");
 	//checking actual list instance is modified or not.
 	values.stream().forEach(System.out::println);
 

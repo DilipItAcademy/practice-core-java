@@ -14,7 +14,6 @@ public class ComparatorVsComparable {
 		employees.add(new Employee(121, "Ally", "Houston"));
 		employees.add(new Employee(131, "Paul", "New York"));
 
-		
 		// Sorting Based On Employee ID
 		System.out.println("Sorting Based On Employee ID");
 		Collections.sort(employees, new EmpIdSort());
@@ -30,9 +29,6 @@ public class ComparatorVsComparable {
 		Comparator<Employee> addressSort = (emp1, emp2) -> emp1.getAddress().compareTo(emp2.getAddress());
 		Collections.sort(employees, addressSort);
 		employees.forEach(System.out::println);
-		
-		
-
 	}
 
 }

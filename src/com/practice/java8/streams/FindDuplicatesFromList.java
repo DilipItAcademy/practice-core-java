@@ -14,8 +14,7 @@ public class FindDuplicatesFromList {
 
 		Set<Integer> noDups = new HashSet<>();
 
-		// values.stream().filter( val ->
-		// !noDups.add(val)).forEach(System.out::println);
+		// Values.stream().filter( val -> !noDups.add(val)).forEach(System.out::println);
 
 		System.out.println("Assigning Result to Same List");
 
