@@ -33,16 +33,16 @@ public class IntValuesStreamOperations {
 		System.out.println("minChar = " + minChar);
 
 		// Find max or min object by object property
-		List<Employe> employees = new ArrayList<Employe>();
+		List<Person> employees = new ArrayList<Person>();
 
-		employees.add(new Employe(1, "Lokesh", 36));
-		employees.add(new Employe(2, "Alex", 46));
-		employees.add(new Employe(3, "Brian", 52));
+		employees.add(new Person(1, "Lokesh", 36));
+		employees.add(new Person(2, "Alex", 46));
+		employees.add(new Person(3, "Brian", 52));
 
 
 		// Get Min and  Max age Employee Object
-		Employe minObject = employees.stream().min(Comparator.comparing(Employe::getAge)).get();
-		Employe maxObject = employees.stream().max(Comparator.comparing(Employe::getAge)).get();
+		Person minObject = employees.stream().min(Comparator.comparing(Person::getAge)).get();
+		Person maxObject = employees.stream().max(Comparator.comparing(Person::getAge)).get();
 
 		System.out.println("minObject = " + minObject);
 		System.out.println("maxObject = " + maxObject);
@@ -51,52 +51,7 @@ public class IntValuesStreamOperations {
 		 List<String> list = Arrays.asList("a","b","c","a","b");
 		 System.out.println(list.stream().filter( s -> s.equals("b")).findFirst());
 
-
 	}
 
 }
 
-class Employe {
-	private int id;
-	private String name;
-	private int age;
-
-	public Employe(int id, String name, int age) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.age = age;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	@Override
-	public String toString() {
-		StringBuilder str = null;
-		str = new StringBuilder();
-		str.append("Id:- " + getId() + " Name:- " + getName() + " Age:- " + getAge());
-		return str.toString();
-	}
-}
