@@ -65,7 +65,7 @@ public class EmployeeQuestions {
 
 		// Print the name of all departments in the organization
 		System.out.println("*******  All Departments in Organization ");
-		employees.stream().map(Employee::getDepartment).distinct().forEach(System.out::println);
+		employees.stream().map(e -> e.getDepartment()).distinct().forEach(System.out::println);
 
 		// What is the average age of male and female employees
 		System.out.println(" *******   Average Age of Male and Female Employees : ");
@@ -119,6 +119,9 @@ public class EmployeeQuestions {
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
 		System.out.println(avgSalariesOfGenderBase);
 
+		//Employee::getSalar
+		
+	
 		testLearning();
 
 	}
