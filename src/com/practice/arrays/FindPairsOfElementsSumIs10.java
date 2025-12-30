@@ -10,7 +10,7 @@ public class FindPairsOfElementsSumIs10 {
 
 			for (int j = i + 1; j < arr.length; j++) {
 
-				// int temp = arr[i];
+			
 
 				if (arr[j] + arr[i] == 10) {
 					System.out.println("Value 1 : " + arr[i] + ", Value 2 : " + arr[j]);
